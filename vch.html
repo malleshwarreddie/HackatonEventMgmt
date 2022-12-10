@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="vch.css">
+</head>
+
+<body>
+    <div id="sectionMain">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top ">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="https://res.cloudinary.com/ds2h7zl7g/image/upload/v1670603408/VSI_logo1_square_nzoqfq.jpg" class="food-munch-logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active" id="navItem1" href="#about">
+                            About
+                            <span class="sr-only">(current)</span>
+                        </a>
+                        <a class="nav-link" href="#wcuSection" id="navItem2">Event Speakers</a>
+                        <a class="nav-link" href="#exploreMenuSection" id="navItem3">Contests</a>
+                        <a class="nav-link" href="#tanking" id="navItem4">Rewards</a>
+                        <a class="nav-link" href="#followUsSection" id="navItem4">Follow us & Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+            <div class="text-center">
+                <h1 class="banner-heading mb-3">Visionet Tech Challenge 🌍</h1>
+                <p class="banner-caption mb-4">Explore Yourself 🎯</p>
+                <div>
+                    <button type="button" class="btn btn-primary custom-button" data-toggle="modal" data-target="#exampleModal3">
+                        Register Here
+                    </button>
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog mt-5">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title thanking-customers-section-modal-title" id="exampleModalLabel">
+                                        Registration Form
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <form id="myForm">
+                                            <div class="mb-3">
+                                                <label for="name">Name</label>
+                                                <input type="text" class="form-control" id="name" />
+                                                <p id="nameErrMsg" class="error-message"></p>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="contactnumber">Contact Number</label>
+                                                <input type="text" class="form-control" id="contactnumber" />
+                                                <p id="contactErrMsg" class="error-message"></p>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email">Email</label>
+                                                <input type="text" class="form-control" id="email" />
+                                                <p id="emailErrMsg" class="error-message"></p>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label>Personal Address</label>
+                                                <br />
+                                                <textarea class="form-control" rows="5" id="address"></textarea>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="collegeName">College Name</label>
+                                                <input type="text" class="form-control" id="collegeName" />
+                                                <p id="clgErrMsg" class="error-message"></p>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="collegeId">College Id</label>
+                                                <input type="text" class="form-control" id="collegeId" />
+                                                <p id="clgIdErrMsg" class="error-message"></p>
+                                            </div>
+
+
+                                            <div class="mb-3 text-center">
+                                                <label style='font-weight:bold' class="gender-field-heading">Select the Events Below</label>
+                                                <br />
+                                                <input type="checkbox" id="event1" value="Hackathon" />
+                                                <label for="event1">Hackathon</label>
+                                                <br />
+                                                <input type="checkbox" id="event2" value="Coding-Competition" />
+                                                <label for="event2">Coding-Competition</label>
+                                                <br />
+                                                <input type="checkbox" id="event3" value="Ideas-Fund" />
+                                                <label for="event3">Ideas-Fund</label>
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <h1 class="gender-field-heading">Year of Study</h1>
+                                                <input type="radio" name="gender" id="genderFirst" value="First" checked />
+                                                <label for="genderFirst">First</label>
+                                                <input type="radio" name="gender" id="genderSecond" value="Second" class="ml-3" />
+                                                <label for="genderSecond">Second</label>
+                                                <input type="radio" name="gender" id="genderThree" value="Third" class="ml-3" />
+                                                <label for="genderThree">Third</label>
+                                                <input type="radio" name="gender" id="genderFour" value="Fourth" class="ml-3" />
+                                                <label for="genderFour">Fourth</label>
+                                            </div>
+                                            <div class="mb-3">
+                                                <h1 class="gender-field-heading">Gender</h1>
+                                                <input type="radio" name="gender1" id="genderMale" value="Male" checked />
+                                                <label for="genderMale">Male</label>
+                                                <input type="radio" name="gender1" id="genderFemale" value="Female" class="ml-2" />
+                                                <label for="genderFemale">Female</label>
+                                            </div>
+                                            <button class="btn btn-primary">Submit</button>
+                                            <button class="btn btn-secondary ml-3" onclick="window.print(); return false">Print</button>
+                                            <h1 id="yourId" class="idMsg-to"></h1>
+                                            <h1 class="menu-card-title">Take print after you get registered</h1>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="wcu-section-heading">About the Event</h1>
+                        <p class="wcu-section-description">
+                            Visionet Tech Challenge is the most fundamental level of matter - the site of all origin. This techno-management extravaganza will be the singularity, ushering in a new period of raw talent, ability, and excitement, just as the challenge has been around for generations, generating significant advances in the sciences. A nationwide event that provides an opportunity for inquisitive minds to explore! With a unique blend of industry pillars - technology and management - this is your time to show the world your mettle, distinct ideas, and flair for technology!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wcu-section pt-5 pb-5" id="wcuSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="wcu-section-heading">Event Speakers</h1>
+                        <p class="wcu-section-description">
+                            A good speaker touches you, a good speaker makes you listen, a good speaker can make you act. A good speaker is connected, connected to themselves and connected to those they talk to. All of these qualities come together so the speaker sounds and looks like they know what they're talking about.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="wcu-card p-3 mb-3">
+                            <img src="https://res.cloudinary.com/ds2h7zl7g/image/upload/v1670578619/sandeep_jAIN_z6k42f.webp" class="wcu-card-image" />
+                            <h1 class="wcu-card-title mt-3">Sandeep Jain</h1>
+                            <p class="wcu-card-description">
+                                Sandeep Jain is the founder at GeeksforGeeks. He is an alumini of Indian Institute of Technology Roorkee. His platform GeeksforGeeks is well recognized among all the engineering students throughout all colleges in India.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="wcu-card p-3 mb-3">
+                            <img src="https://res.cloudinary.com/ds2h7zl7g/image/upload/v1670578619/wer_qgjwpn.jpg" class="wcu-card-image" />
+                            <h1 class="wcu-card-title mt-3">Bhavish Aggarwal</h1>
+                            <p class="wcu-card-description">
+                                Bhavish Aggarwal is an Indian entrepreneur and co-founder of Ola Cabs and Ola Electric. Aggarwal was included in Time magazine's 100 Most Influential People of 2018.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="wcu-card p-3 mb-3">
+                            <img src="https://res.cloudinary.com/ds2h7zl7g/image/upload/v1670578619/photo_jcl70q.webp" class="wcu-card-image" />
+                            <h1 class="wcu-card-title mt-3">Deepinder Goyal</h1>
+                            <p class="wcu-card-description">
+                                Deepinder Goyal, founder and <span class="offers">CEO of Zomato</span>, might have delivered your last meal himself.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-menu-section pt-5 pb-5" id="exploreMenuSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Explore Contests</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://res.cloudinary.com/ds2h7zl7g/image/upload/v1670579526/1_ktl7vg.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Hackathon</h1>
+                            <div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                                    Click Here
+                                </button>
+                                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog mt-5">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title thanking-customers-section-modal-title" id="exampleModalLabel">
+                                                    Hackathon Details
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="wcu-section-description">A 24-Hour Hackathon designed specifically to boost your Adrenaline drive with our very special Company specific tracks in Quantum Hours</p>
+                                                <ul>
+                                                    <li><span style="font-weight:bold">Registration Fee </span> : 800</li>
+                                                    <li><span style="font-weight:bold">Team-Size </span>: 3-4 Members</li>
+                                                    <li><span style="font-weight:bold">Timing </span>: 24 Hours</li>
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://res.cloudinary.com/ds2h7zl7g/image/upload/v1670579601/2_xlcih2.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Competitive Coding</h1>
+                            <div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                                    Click Here
+                                </button>
+                                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog mt-5">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title thanking-customers-section-modal-title" id="exampleModalLabel">
+                                                    Competitive Coding Details
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="wcu-section-description">A Competitive Coding Event for the BraveHearts who wish to be the best among the best. You leave the rest, to be the best!</p>
+                                                <ul>
+                                                    <li><span style="font-weight:bold">Registration Fee </span> : 200</li>
+                                                    <li><span style="font-weight:bold">Team-Size </span>: Individual</li>
+                                                    <li><span style="font-weight:bold">Timing </span>: 3 hours</li>
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://res.cloudinary.com/ds2h7zl7g/image/upload/v1670579525/3_xoml8u.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Ideas2Fund</h1>
+                            <div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+                                    Click Here
+                                </button>
+                                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog mt-5">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title thanking-customers-section-modal-title" id="exampleModalLabel">
+                                                    Ideas2Fund Details
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="wcu-section-description">A contest where entrepreneurs present their business concept to a panel in the hope of winning a cash prize or investment capital</p>
+                                                <ul>
+                                                    <li><span style="font-weight:bold">Registration Fee </span> : 300</li>
+                                                    <li><span style="font-weight:bold">Team-Size </span>: Max 3 Members</li>
+                                                    <li><span style="font-weight:bold">Timing </span>: 3 hours</li>
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="healthy-food-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <div class="text-center">
+                            <img src="https://res.cloudinary.com/ds2h7zl7g/image/upload/v1670582054/exc_ucdr0y.jpg" class="healthy-food-section-img" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <h1 class="healthy-food-section-heading">
+                            and Many More!
+                        </h1>
+                        <p class="healthy-food-section-description">
+                            and we are planning for many more contests so please actively participate in the contests and explore yourselves.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thanking-customers-section pt-5 pb-5" id="tanking">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+                        <h1 class="thanking-customers-section-heading">
+                            Win exciting goodies along with appreciation Certificates
+                        </h1>
+                        <p class="thanking-customers-section-description">
+                            We have a surprise gift for top 3 in all Contests
+                        </p>
+                        <div class="d-md-none">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 d-none d-md-block">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="follow-us-section-heading">Follow Us</h1>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-twitter icon"></i>
+                            </div>
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-instagram icon"></i>
+                            </div>
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-facebook icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://res.cloudinary.com/ds2h7zl7g/image/upload/v1670603408/VSI_logo1_square_nzoqfq.jpg" class="food-munch-logo" />
+                        <h1 class="footer-section-mail-id">visionet@gmail.com</h1>
+                        <p class="footer-section-address">
+                            Bengaluru, Karnataka 560068, Contact No : 080666 90000
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    <script src="vch.js"></script>
+</body>
+
+</html>
